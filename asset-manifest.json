@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/khomenk0code.github.io/static/css/main.4a728b18.css",
+    "main.js": "/khomenk0code.github.io/static/js/main.3744432b.js",
+    "index.html": "/khomenk0code.github.io/index.html",
+    "main.4a728b18.css.map": "/khomenk0code.github.io/static/css/main.4a728b18.css.map",
+    "main.3744432b.js.map": "/khomenk0code.github.io/static/js/main.3744432b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a728b18.css",
+    "static/js/main.3744432b.js"
+  ]
+}
