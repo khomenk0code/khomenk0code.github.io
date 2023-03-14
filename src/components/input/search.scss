@@ -1,0 +1,35 @@
+.search-box {
+  position: relative;
+  font-style: normal;
+  margin-top: 16px;
+  width: 100%;
+  @media (max-width: 767px) {
+    margin-top: 32px;
+
+  }
+
+
+  input {
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 48px;
+    height: 56px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 51px;
+    width: 100%;
+    @media (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  i {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+  }
+}

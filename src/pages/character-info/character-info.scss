@@ -1,0 +1,156 @@
+
+.link {
+  text-decoration: none;
+
+}
+
+.back-link {
+  position: absolute;
+  top: 21px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  &:hover, &:focus {
+    .back-link-icon {
+      transform: translateX(-3px);
+    }
+  }
+  .back-link-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    transition: transform 0.2s ease-out;
+  }
+}
+
+.back-link-text {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+
+
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 76px;
+  font-style: normal;
+
+  .divider {
+    margin-top: 11px;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(33, 33, 33, 0.08)
+  }
+
+
+  .info-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 48px;
+      @media (max-width: 767px) {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        margin: 34px 0;
+
+      }
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      border: 5px solid #F2F2F7;
+      @media (max-width: 767px) {
+        width: 150px;
+        height: 148px;
+        margin: 0;
+      }
+    }
+  }
+
+  .info-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #8E8E93;
+    margin-bottom: 48px;
+    align-self: center;
+
+    @media (max-width: 767px) {
+      align-self: flex-start;
+      margin-bottom: 16px;
+    }
+
+  }
+
+
+  .info-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 413px;
+
+    .detail {
+      padding: 9px 0 0 16px;
+      width: 413px;
+
+      @media (max-width: 767px) {
+        width: 100%;
+
+      }
+
+      span:first-child {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: #081F32;
+      }
+
+      .detail-desc {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: #6E798C;
+      }
+    }
+  }
+
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.error {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
