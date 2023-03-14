@@ -1,61 +1,13 @@
-
 .login-menu {
   position: absolute;
   top: -100%;
   right: 0;
   transition: 0.5s top ease-in;
-
-
 }
+
 .open {
   top: 0;
 }
-
-.login-menu-button {
-  background-color: grey;
-  height: 30px;
-  border: none;
-  color: white;
-  padding: 6px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 15px;
-
-}
-
-.login-menu-dropdown {
-  display: flex;
-  position: relative;
-  min-width: 200px;
-  top: 0;
-  right: 50%;
-  z-index: 1;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 8px 0;
-
-}
-
-.login-menu-option {
-  display: block;
-  width: 100%;
-  background-color: transparent;
-  color: #333;
-  padding: 8px 16px;
-  font-size: 16px;
-  text-align: left;
-  border: none;
-  cursor: pointer;
-}
-
-
-.login-menu-option:hover {
-  background-color: #ddd;
-}
-
-
 
 .user-info {
   position: absolute;
@@ -64,6 +16,7 @@
   align-items: center;
   transition: 0.5s top ease-in;
   right: 0;
+  background: #FFF;
   white-space: nowrap;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2),
   0 3px 4px rgba(0, 0, 0, 0.12),
@@ -72,6 +25,12 @@
   border-bottom-right-radius: 4px;
   padding: 16px 20px;
 
+  img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+  }
 
 .login-buttons-wrapper {
   display: flex;
@@ -79,24 +38,20 @@
   align-items: center;
 
 
-
   p {
     padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 22px;
   }
-
 }
-
 
   .login-button {
     top: unset;
     bottom: -25px;
-  }
-
-  img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
+    transition: 0.3s color ease-in;
+    &:hover {
+      color: rgb(43,123,81);
+    }
   }
 
   .user-name {
@@ -124,10 +79,8 @@
     transition: 0.3s color ease-in;
     &:hover {
       color: rgb(43,123,81);
-
     }
   }
-
 }
 
 .full-screen-wrapper {

@@ -7,16 +7,9 @@
   flex-flow: column;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
-  max-width: 1020px;
+  max-width: 1068px;
   margin: 0 auto;
-  @media (max-width: 767px) {
-    margin: 0 24px;
-
-
-
-
-  }
-
+  padding: 0 24px;
 
   .main-logo {
     max-width: 600px;
@@ -49,7 +42,6 @@
 
   }
 
-
   .loading-spinner {
     display: flex;
     justify-content: center;
@@ -65,7 +57,6 @@
       font-size: 20px;
     }
 
-
     img {
       position: relative;
       width: 320px;
@@ -73,5 +64,4 @@
       transform: rotate(90deg)
     }
   }
-
 }

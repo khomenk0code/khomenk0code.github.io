@@ -1,17 +1,21 @@
-
 .link {
   text-decoration: none;
-
+ &:focus {
+    .back-link-icon {
+      transform: translateX(-3px);
+    }
+  }
 }
 
 .back-link {
-  position: absolute;
+  max-width: 110px;
+  position: relative;
   top: 21px;
   left: 50px;
   display: flex;
   align-items: center;
   text-decoration: none;
-  &:hover, &:focus {
+  &:hover {
     .back-link-icon {
       transform: translateX(-3px);
     }
@@ -22,6 +26,10 @@
     margin-right: 8px;
     transition: transform 0.2s ease-out;
   }
+  @media (max-width: 767px) {
+    top: 23px;
+    left: 24px;
+  }
 }
 
 .back-link-text {
@@ -30,7 +38,6 @@
   font-size: 18px;
   line-height: 21px;
   color: #000000;
-
 
 }
 
@@ -67,7 +74,7 @@
         font-size: 32px;
         line-height: 38px;
         margin: 34px 0;
-
+        padding-left: 25px;
       }
     }
 
@@ -108,6 +115,9 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 413px;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
 
     .detail {
       padding: 9px 0 0 16px;
@@ -115,7 +125,6 @@
 
       @media (max-width: 767px) {
         width: 100%;
-
       }
 
       span:first-child {
@@ -135,7 +144,6 @@
       }
     }
   }
-
 }
 
 .spinner {

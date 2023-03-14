@@ -1,36 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Main from './pages/main/main';
+import MainComponent from './pages/main/main.component';
 import {Routes, Route} from 'react-router';
-import CharacterInfo from '../src/pages/character-info/character-info'
-import {BrowserRouter} from "react-router-dom"
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import UserProvider from "./components/login-menu/user-provider";
-import LoginPortal from "./components/login-menu/login-portal";
-import {initializeApp} from "firebase/app";
+import CharacterInfo from './pages/character-info/character-info.component';
+import {BrowserRouter} from 'react-router-dom';
+import {GoogleOAuthProvider} from '@react-oauth/google';
+import UserProvider from './components/menu/portal/portal.provider';
+import LoginPortal from './components/menu/portal/portal.component';
+import {initializeApp} from 'firebase/app';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+	document.getElementById('root')!,
 );
 
 initializeApp({
-    apiKey: "AIzaSyAuMqkV_zvYjK7IiQMG4uRZwZOUqi-VMDY",
-    projectId: "optimum-monitor-380016",
-    authDomain: "optimum-monitor-380016.firebaseapp.com"
-
-})
+	apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+	projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+	authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+});
 
 root.render(
-    <GoogleOAuthProvider clientId="60036572759-a92sqmtsbecp13jtrch7pah2qu2jkib9">
-        <BrowserRouter>
-            <UserProvider>
-                   <Routes>
-                       <Route path="/" element={<Main/>}/>
-                       <Route path="/character-info/:id" element={<CharacterInfo />} />
-                   </Routes>
-                <LoginPortal/>
-            </UserProvider>
-        </BrowserRouter>
-    </GoogleOAuthProvider>
+	<BrowserRouter>
+		<GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID!}>
+			<UserProvider>
+				<Routes>
+					<Route path='/' element={<MainComponent/>}/>
+					<Route path='/character-info/:id' element={<CharacterInfo />} />
+				</Routes>
+				<LoginPortal/>
+			</UserProvider>
+		</GoogleOAuthProvider>
+	</BrowserRouter>,
+
 );

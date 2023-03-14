@@ -5,12 +5,9 @@
   top: 0;
   left: 0;
   pointer-events: none;
-
-
   &.show {
     pointer-events: auto;
   }
-
 }
 
 .login-button {
@@ -28,6 +25,10 @@
   0 4px 4px rgba(0, 0, 0, 0.12),
   0 4px 4px rgba(0, 0, 0, 0.14);
 
+  transition: 0.3s color ease-in;
+  &:hover {
+    color: rgb(43,123,81);
+  }
 
 }
 
